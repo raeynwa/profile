@@ -5,14 +5,14 @@ import React, { useState, useEffect, useRef } from 'react';
 // --- SVG Icons (as components for reusability) ---
 // Using inline SVGs for specific tech logos as lucide-react or other libraries aren't available in this environment.
 
-const HtmlIcon = ({ className }) => (
+const HtmlIcon = ({ className }: { className?: string }) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
         <polyline points="16 18 22 12 16 6"></polyline>
         <polyline points="8 6 2 12 8 18"></polyline>
     </svg>
 );
 
-const CssIcon = ({ className }) => (
+const CssIcon = ({ className }: { className?: string }) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
         <line x1="4" y1="9" x2="20" y2="9"></line>
         <line x1="4" y1="15" x2="20" y2="15"></line>
@@ -21,7 +21,7 @@ const CssIcon = ({ className }) => (
     </svg>
 );
 
-const JavascriptIcon = ({ className }) => (
+const JavascriptIcon = ({ className }: { className?: string }) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
         <path d="M12 2a10 10 0 1 0 10 10A10.01 10.01 0 0 0 12 2z"/>
         <path d="M8 9h3v6H8z"/>
@@ -29,7 +29,7 @@ const JavascriptIcon = ({ className }) => (
     </svg>
 );
 
-const PhpIcon = ({ className }) => (
+const PhpIcon = ({ className }: { className?: string }) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
         <ellipse cx="12" cy="12" rx="10" ry="7"/>
         <path d="M7 15V9h2.5a2.5 2.5 0 1 1 0 5H7"/>
@@ -38,7 +38,7 @@ const PhpIcon = ({ className }) => (
     </svg>
 );
 
-const LaravelIcon = ({ className }) => (
+const LaravelIcon = ({ className }: { className?: string }) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
         <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
         <line x1="16" y1="8" x2="2" y2="22"></line>
@@ -46,14 +46,14 @@ const LaravelIcon = ({ className }) => (
     </svg>
 );
 
-const NextjsIcon = ({ className }) => (
+const NextjsIcon = ({ className }: { className?: string }) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
         <path d="M9 15V9l7.7 10.5A9 9 0 1 1 9 9Z"/>
     </svg>
 );
 
 
-const DatabaseIcon = ({ className }) => (
+const DatabaseIcon = ({ className }: { className?: string }) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
         <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
         <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
@@ -61,7 +61,7 @@ const DatabaseIcon = ({ className }) => (
     </svg>
 );
 
-const ServerIcon = ({ className }) => (
+const ServerIcon = ({ className }: { className?: string }) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
         <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
         <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
@@ -70,7 +70,7 @@ const ServerIcon = ({ className }) => (
     </svg>
 );
 
-const GitBranchIcon = ({ className }) => (
+const GitBranchIcon = ({ className }: { className?: string }) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
         <line x1="6" y1="3" x2="6" y2="15"></line>
         <circle cx="18" cy="6" r="3"></circle>
@@ -79,20 +79,20 @@ const GitBranchIcon = ({ className }) => (
     </svg>
 );
 
-const MailIcon = ({ className }) => (
+const MailIcon = ({ className }: { className?: string }) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
         <rect width="20" height="16" x="2" y="4" rx="2" />
         <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
     </svg>
 );
 
-const GithubIcon = ({ className }) => (
+const GithubIcon = ({ className }: { className?: string }) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
     </svg>
 );
 
-const LinkedinIcon = ({ className }) => (
+const LinkedinIcon = ({ className }: { className?: string }) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
         <rect x="2" y="9" width="4" height="12" />
@@ -100,7 +100,7 @@ const LinkedinIcon = ({ className }) => (
     </svg>
 );
 
-const DownloadIcon = ({ className }) => (
+const DownloadIcon = ({ className }: { className?: string }) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
         <polyline points="7 10 12 15 17 10" />
@@ -108,7 +108,7 @@ const DownloadIcon = ({ className }) => (
     </svg>
 );
 
-const WhatsappIcon = ({ className }) => (
+const WhatsappIcon = ({ className }: { className?: string }) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
     </svg>
@@ -116,7 +116,7 @@ const WhatsappIcon = ({ className }) => (
 
 
 // Custom hook to detect when an element is on screen
-const useOnScreen = (ref, options) => {
+const useOnScreen = (ref: React.RefObject<Element | null>, options?: IntersectionObserverInit): boolean => {
   const [isIntersecting, setIntersecting] = useState(false);
 
   useEffect(() => {
@@ -215,9 +215,9 @@ export default function App() {
   ];
 
   // Refs for scroll animation
-  const skillsRef = useRef(null);
-  const projectsRef = useRef(null);
-  const experienceRef = useRef(null);
+  const skillsRef = useRef<HTMLElement | null>(null);
+  const projectsRef = useRef<HTMLElement | null>(null);
+  const experienceRef = useRef<HTMLElement | null>(null);
 
   const isSkillsVisible = useOnScreen(skillsRef, { threshold: 0.1 });
   const isProjectsVisible = useOnScreen(projectsRef, { threshold: 0.1 });
