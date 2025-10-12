@@ -248,7 +248,7 @@ export default function App() {
               Delivering <span className="text-[#AA0632]">Digital Solutions</span> to Modernize Your Business
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Hi, I'm Raey, a software engineer with expertise in building end-to-end systems including Point of Sales, Inventory Management, and Academic Information Systems for universities and schools. Let's work together to find solutions to your challenges.
+              Hi, I&#39;m Raey, a software engineer with expertise in building end-to-end systems including Point of Sales, Inventory Management, and Academic Information Systems for universities and schools. Let&#39;s work together to find solutions to your challenges.
             </p>
             <div className="flex justify-center items-center space-x-4">
               <a href="#contact" className="bg-[#AA0632] text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out hover:bg-red-800 transform hover:scale-105">
@@ -330,7 +330,7 @@ export default function App() {
                 <div className="absolute -left-[46px] top-1.5 w-4 h-4 bg-[#AA0632] rounded-full border-4 border-[#111111]"></div>
                 <p className="text-[#AA0632] font-semibold text-lg">Nov 2022 - Present</p>
                 <h3 className="text-2xl font-bold mt-1">Project Manager</h3>
-                <p className="text-gray-400 mb-2">Yayasan Al Ma'soem Bandung</p>
+                <p className="text-gray-400 mb-2">Yayasan Al Ma&#39;soem Bandung</p>
                 <p className="text-gray-300">
                   Overseeing all aspects of software development, from system analysis and backend/frontend development to quality control. Responsible for team management, ensuring performance aligns with targets, and maintaining clear communication with stakeholders for smooth project execution.
                 </p>
@@ -340,7 +340,7 @@ export default function App() {
                 <div className="absolute -left-[46px] top-1.5 w-4 h-4 bg-[#AA0632] rounded-full border-4 border-[#111111]"></div>
                 <p className="text-[#AA0632] font-semibold text-lg">Dec 2019 - Nov 2022</p>
                 <h3 className="text-2xl font-bold mt-1">Full Stack Engineer</h3>
-                <p className="text-gray-400 mb-2">Yayasan Al Ma'soem Bandung</p>
+                <p className="text-gray-400 mb-2">Yayasan Al Ma&#39;soem Bandung</p>
                 <p className="text-gray-300">
                   Gathered user needs, created detailed project briefs, and coordinated with the team to analyze, design, and implement solutions. Handled both front-end and back-end development, database design, and deployment to ensure applications were efficient and maintainable.
                 </p>
@@ -360,7 +360,7 @@ export default function App() {
                 <div className="absolute -left-[46px] top-1.5 w-4 h-4 bg-[#AA0632] rounded-full border-4 border-[#111111]"></div>
                 <p className="text-[#AA0632] font-semibold text-lg">Mar 2018 - Feb 2019</p>
                 <h3 className="text-2xl font-bold mt-1">Fullstack Developer & Teacher</h3>
-                <p className="text-gray-400 mb-2">Children's House (Yayasan Cendekia Harapan)</p>
+                <p className="text-gray-400 mb-2">Children&#39;s House (Yayasan Cendekia Harapan)</p>
                 <p className="text-gray-300">
                   Developed a student value system and a UKS Android application. Also taught ICT and Design & Technology subjects, bridging the gap between technical development and educational needs.
                 </p>
@@ -386,7 +386,7 @@ export default function App() {
             <h2 className="text-4xl font-bold mb-2">Contact Me</h2>
             <div className="w-24 h-1 bg-[#AA0632] mx-auto mb-8"></div>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              I'm currently open to new opportunities. Feel free to reach out if you have a project in mind or just want to connect.
+              I&#39;m currently open to new opportunities. Feel free to reach out if you have a project in mind or just want to connect.
             </p>
             <div className="flex justify-center items-center mb-8">
               <a href="mailto:raeynwa@gmail.com" className="flex items-center text-lg transition duration-300 hover:text-[#AA0632]">

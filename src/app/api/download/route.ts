@@ -1,8 +1,8 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import path from 'path';
 import { readFile } from 'fs/promises';
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
     // Path to your CV file in the public folder
     const cvPath = path.join(process.cwd(), 'public', 'CV Raey Portofolio Sept 2025.pdf');
