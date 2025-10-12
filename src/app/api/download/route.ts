@@ -11,9 +11,12 @@ export async function GET() {
     const fileBuffer = await readFile(cvPath);
     
     // Create response with proper headers for PDF viewing in browser
-    const response = new NextResponse(fileBuffer);
-    response.headers.set('Content-Type', 'application/pdf');
-    response.headers.set('Content-Disposition', 'inline; filename="CV-Raey-M-Yunus.pdf"');
+    const response = new NextResponse(fileBuffer.buffer, {
+      headers: {
+        'Content-Type': 'application/pdf',
+        'Content-Disposition': 'inline; filename="CV-Raey-M-Yunus.pdf"',
+      },
+    });
     
     return response;
   } catch (error) {
