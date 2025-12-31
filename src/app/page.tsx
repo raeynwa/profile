@@ -6,112 +6,112 @@ import React, { useState, useEffect, useRef } from 'react';
 // Using inline SVGs for specific tech logos as lucide-react or other libraries aren't available in this environment.
 
 const HtmlIcon = ({ className }: { className?: string }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-        <polyline points="16 18 22 12 16 6"></polyline>
-        <polyline points="8 6 2 12 8 18"></polyline>
-    </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <polyline points="16 18 22 12 16 6"></polyline>
+    <polyline points="8 6 2 12 8 18"></polyline>
+  </svg>
 );
 
 const CssIcon = ({ className }: { className?: string }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-        <line x1="4" y1="9" x2="20" y2="9"></line>
-        <line x1="4" y1="15" x2="20" y2="15"></line>
-        <line x1="10" y1="3" x2="8" y2="21"></line>
-        <line x1="16" y1="3" x2="14" y2="21"></line>
-    </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <line x1="4" y1="9" x2="20" y2="9"></line>
+    <line x1="4" y1="15" x2="20" y2="15"></line>
+    <line x1="10" y1="3" x2="8" y2="21"></line>
+    <line x1="16" y1="3" x2="14" y2="21"></line>
+  </svg>
 );
 
 const JavascriptIcon = ({ className }: { className?: string }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-        <path d="M12 2a10 10 0 1 0 10 10A10.01 10.01 0 0 0 12 2z"/>
-        <path d="M8 9h3v6H8z"/>
-        <path d="M15.5 12c0-1.5-1.12-2.5-2.5-2.5h-1V15h1c1.38 0 2.5-1.5 2.5-2.5z"/>
-    </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M12 2a10 10 0 1 0 10 10A10.01 10.01 0 0 0 12 2z" />
+    <path d="M8 9h3v6H8z" />
+    <path d="M15.5 12c0-1.5-1.12-2.5-2.5-2.5h-1V15h1c1.38 0 2.5-1.5 2.5-2.5z" />
+  </svg>
 );
 
 const PhpIcon = ({ className }: { className?: string }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-        <ellipse cx="12" cy="12" rx="10" ry="7"/>
-        <path d="M7 15V9h2.5a2.5 2.5 0 1 1 0 5H7"/>
-        <path d="M12.5 15V9h2.5a2.5 2.5 0 1 1 0 5H12.5"/>
-        <path d="M18 15V9h2.5a2.5 2.5 0 1 1 0 5H18"/>
-    </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <ellipse cx="12" cy="12" rx="10" ry="7" />
+    <path d="M7 15V9h2.5a2.5 2.5 0 1 1 0 5H7" />
+    <path d="M12.5 15V9h2.5a2.5 2.5 0 1 1 0 5H12.5" />
+    <path d="M18 15V9h2.5a2.5 2.5 0 1 1 0 5H18" />
+  </svg>
 );
 
 const LaravelIcon = ({ className }: { className?: string }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-        <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
-        <line x1="16" y1="8" x2="2" y2="22"></line>
-        <line x1="17.5" y1="15" x2="9" y2="15"></line>
-    </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
+    <line x1="16" y1="8" x2="2" y2="22"></line>
+    <line x1="17.5" y1="15" x2="9" y2="15"></line>
+  </svg>
 );
 
 const NextjsIcon = ({ className }: { className?: string }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-        <path d="M9 15V9l7.7 10.5A9 9 0 1 1 9 9Z"/>
-    </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M9 15V9l7.7 10.5A9 9 0 1 1 9 9Z" />
+  </svg>
 );
 
 
 const DatabaseIcon = ({ className }: { className?: string }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-        <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-    </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+  </svg>
 );
 
 const ServerIcon = ({ className }: { className?: string }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-        <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-        <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-        <line x1="6" y1="6" x2="6.01" y2="6"></line>
-        <line x1="6" y1="18" x2="6.01" y2="18"></line>
-    </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+    <line x1="6" y1="6" x2="6.01" y2="6"></line>
+    <line x1="6" y1="18" x2="6.01" y2="18"></line>
+  </svg>
 );
 
 const GitBranchIcon = ({ className }: { className?: string }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-        <line x1="6" y1="3" x2="6" y2="15"></line>
-        <circle cx="18" cy="6" r="3"></circle>
-        <circle cx="6" cy="18" r="3"></circle>
-        <path d="M18 9a9 9 0 0 1-9 9"></path>
-    </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <line x1="6" y1="3" x2="6" y2="15"></line>
+    <circle cx="18" cy="6" r="3"></circle>
+    <circle cx="6" cy="18" r="3"></circle>
+    <path d="M18 9a9 9 0 0 1-9 9"></path>
+  </svg>
 );
 
 const MailIcon = ({ className }: { className?: string }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-        <rect width="20" height="16" x="2" y="4" rx="2" />
-        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-    </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <rect width="20" height="16" x="2" y="4" rx="2" />
+    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+  </svg>
 );
 
 const GithubIcon = ({ className }: { className?: string }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-    </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+  </svg>
 );
 
 const LinkedinIcon = ({ className }: { className?: string }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-        <rect x="2" y="9" width="4" height="12" />
-        <circle cx="4" cy="4" r="2" />
-    </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+    <rect x="2" y="9" width="4" height="12" />
+    <circle cx="4" cy="4" r="2" />
+  </svg>
 );
 
 const DownloadIcon = ({ className }: { className?: string }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-        <polyline points="7 10 12 15 17 10" />
-        <line x1="12" y1="15" x2="12" y2="3" />
-    </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+    <polyline points="7 10 12 15 17 10" />
+    <line x1="12" y1="15" x2="12" y2="3" />
+  </svg>
 );
 
 const WhatsappIcon = ({ className }: { className?: string }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-    </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+  </svg>
 );
 
 
@@ -158,6 +158,12 @@ export default function App() {
   ];
 
   const projects = [
+    {
+      title: "Lab BK UIN Banten - Psychometric Testing Platform",
+      description: "Developed a comprehensive psychometric testing platform for UIN Banten, featuring various psychological assessments including RIASEC, DISC, DCM, VAK, and Sociometry tests. The system enables students to complete assessments and provides detailed analytical reports for counselors.",
+      tags: ["Next.js", "Laravel", "PostgreSQL"],
+      link: "https://labbkpi.id"
+    },
     {
       title: "PMB Ma’soem University",
       description: "Developed a streamlined online admission portal for new students, handling the entire registration process from form submission, document uploads, and implementing a payment gateway for admission fees, to selection announcements.",
@@ -263,8 +269,8 @@ export default function App() {
         </section>
 
         {/* Skills Section */}
-        <section 
-          id="skills" 
+        <section
+          id="skills"
           ref={skillsRef}
           className={`py-20 transition-all duration-1000 ease-in-out ${isSkillsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
         >
@@ -284,8 +290,8 @@ export default function App() {
 
 
         {/* Projects Section */}
-        <section 
-          id="projects" 
+        <section
+          id="projects"
           ref={projectsRef}
           className={`py-20 bg-[#1a1a1a] transition-all duration-1000 ease-in-out ${isProjectsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
         >
@@ -305,18 +311,18 @@ export default function App() {
                     </div>
                   </div>
                   <div className="p-6 pt-0">
-                     <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-block bg-[#AA0632] text-white font-semibold py-2 px-6 rounded-full transition duration-300 ease-in-out hover:bg-red-800 transform hover:scale-105">
-                        View Project
-                      </a>
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-block bg-[#AA0632] text-white font-semibold py-2 px-6 rounded-full transition duration-300 ease-in-out hover:bg-red-800 transform hover:scale-105">
+                      View Project
+                    </a>
                   </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
-        
+
         {/* Experience Section */}
-        <section 
+        <section
           id="experience"
           ref={experienceRef}
           className={`py-20 bg-[#111111] transition-all duration-1000 ease-in-out ${isExperienceVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
@@ -394,17 +400,17 @@ export default function App() {
                 raeynwa@gmail.com
               </a>
             </div>
-             <div className="flex justify-center items-center space-x-6">
-                <a href="https://github.com/raeynwa" target="_blank" rel="noopener noreferrer" className="text-gray-400 transition duration-300 hover:text-[#AA0632]">
-                    <GithubIcon className="w-10 h-10" />
-                </a>
-                <a href="https://www.linkedin.com/in/raey-m-yunus-32b470233/" target="_blank" rel="noopener noreferrer" className="text-gray-400 transition duration-300 hover:text-[#AA0632]">
-                    <LinkedinIcon className="w-10 h-10" />
-                </a>
-                <a href="https://wa.me/6287792067999" target="_blank" rel="noopener noreferrer" className="text-gray-400 transition duration-300 hover:text-[#AA0632]">
-                    <WhatsappIcon className="w-10 h-10" />
-                </a>
-             </div>
+            <div className="flex justify-center items-center space-x-6">
+              <a href="https://github.com/raeynwa" target="_blank" rel="noopener noreferrer" className="text-gray-400 transition duration-300 hover:text-[#AA0632]">
+                <GithubIcon className="w-10 h-10" />
+              </a>
+              <a href="https://www.linkedin.com/in/raey-m-yunus-32b470233/" target="_blank" rel="noopener noreferrer" className="text-gray-400 transition duration-300 hover:text-[#AA0632]">
+                <LinkedinIcon className="w-10 h-10" />
+              </a>
+              <a href="https://wa.me/6287792067999" target="_blank" rel="noopener noreferrer" className="text-gray-400 transition duration-300 hover:text-[#AA0632]">
+                <WhatsappIcon className="w-10 h-10" />
+              </a>
+            </div>
           </div>
         </section>
       </main>
