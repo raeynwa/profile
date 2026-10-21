@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack --port=1000",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:github": "node --experimental-strip-types --test tests/github-activity.test.mjs"
   },
   "dependencies": {
     "next": "15.5.28",

@@ -9,6 +9,7 @@ import {GitHubContributions} from '@/components/GitHubContributions';
 import {portfolioOpenGraph} from '@/lib/site';
 
 export const metadata: Metadata = {alternates: {canonical: '/'}, openGraph: {...portfolioOpenGraph, url: '/'}};
+export const revalidate = 3600;
 
 export default function Home() {
   return <PortfolioShell page="home"><main className="rp-shell" id="main-content" tabIndex={-1}>
