@@ -1,0 +1,112 @@
+{
+  "tando-list": {
+    "src": "/projects/showcase/tando-list.webp",
+    "width": 1440,
+    "height": 960
+  },
+  "tando-form": {
+    "src": "/projects/showcase/tando-form.webp",
+    "width": 1425,
+    "height": 950
+  },
+  "tando-qr": {
+    "src": "/projects/showcase/tando-qr.webp",
+    "width": 1440,
+    "height": 960
+  },
+  "tando-valid": {
+    "src": "/projects/showcase/tando-valid.webp",
+    "width": 1440,
+    "height": 960
+  },
+  "tando-mobile": {
+    "src": "/projects/showcase/tando-mobile.webp",
+    "width": 390,
+    "height": 920
+  },
+  "tando-expired": {
+    "src": "/projects/showcase/tando-expired.webp",
+    "width": 390,
+    "height": 920
+  },
+  "tando-revoked": {
+    "src": "/projects/showcase/tando-revoked.webp",
+    "width": 390,
+    "height": 920
+  },
+  "labbkpi": {
+    "src": "/projects/showcase/labbkpi.webp",
+    "width": 1440,
+    "height": 960
+  },
+  "parents": {
+    "src": "/projects/showcase/parents.webp",
+    "width": 1425,
+    "height": 950
+  },
+  "hermes": {
+    "src": "/projects/showcase/hermes.webp",
+    "width": 1440,
+    "height": 960
+  },
+  "labbkpi-sessions": {
+    "src": "/projects/showcase/labbkpi-sessions.webp",
+    "width": 1440,
+    "height": 960
+  },
+  "labbkpi-detail": {
+    "src": "/projects/showcase/labbkpi-detail.webp",
+    "width": 1440,
+    "height": 960
+  },
+  "labbkpi-excel": {
+    "src": "/projects/showcase/labbkpi-excel.webp",
+    "width": 1440,
+    "height": 960
+  },
+  "labbkpi-sociometry": {
+    "src": "/projects/showcase/labbkpi-sociometry.webp",
+    "width": 1440,
+    "height": 960
+  },
+  "labbkpi-mobile": {
+    "src": "/projects/showcase/labbkpi-mobile.webp",
+    "width": 390,
+    "height": 920
+  },
+  "parents-overview": {
+    "src": "/projects/showcase/parents-overview.webp",
+    "width": 1425,
+    "height": 950
+  },
+  "parents-payment": {
+    "src": "/projects/showcase/parents-payment.webp",
+    "width": 1440,
+    "height": 960
+  },
+  "parents-mobile": {
+    "src": "/projects/showcase/parents-mobile.webp",
+    "width": 375,
+    "height": 885
+  },
+  "parents-notification": {
+    "src": "/projects/showcase/parents-notification.webp",
+    "width": 375,
+    "height": 885
+  },
+  "hermes-agents": {
+    "src": "/projects/showcase/hermes-agents.webp",
+    "width": 1425,
+    "height": 950
+  },
+  "hermes-task": {
+    "src": "/projects/showcase/hermes-task.webp",
+    "width": 1425,
+    "height": 950
+  },
+  "hermes-floor": {
+    "src": "/projects/showcase/hermes-floor.webp",
+    "width": 1440,
+    "height": 960
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "File": "dm-sans",
+    "Name": "DMSans[opsz,wght].ttf",
+    "Source": "https://raw.githubusercontent.com/google/fonts/main/ofl/dmsans/DMSans%5Bopsz%2Cwght%5D.ttf",
+    "Directory": "dmsans"
+  },
+  {
+    "File": "space-grotesk",
+    "Name": "SpaceGrotesk[wght].ttf",
+    "Source": "https://raw.githubusercontent.com/google/fonts/main/ofl/spacegrotesk/SpaceGrotesk%5Bwght%5D.ttf",
+    "Directory": "spacegrotesk"
+  },
+  {
+    "File": "ibm-plex-mono-400",
+    "Name": "IBMPlexMono-Regular.ttf",
+    "Source": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexmono/IBMPlexMono-Regular.ttf",
+    "Directory": "ibmplexmono"
+  },
+  {
+    "File": "ibm-plex-mono-500",
+    "Name": "IBMPlexMono-Medium.ttf",
+    "Source": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexmono/IBMPlexMono-Medium.ttf",
+    "Directory": "ibmplexmono"
+  }
+]

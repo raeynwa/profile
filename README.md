@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Raey — personal portfolio
 
-## Getting Started
+An English professional showcase built with Next.js App Router, React, and TypeScript. The approved Technical / Racing Red design uses a black background, original application screenshots, detailed case studies, and a quiet invitation to collaborate.
 
-First, run the development server:
+## Development
 
-```bash
+```powershell
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The default development URL is `http://localhost:1000`. To build and preview independently from a running development server:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```powershell
+$env:PORTFOLIO_BUILD_DIR = '.next-review'
+npm run build
+npm run start -- --hostname 127.0.0.1 --port 3187
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Keep the same `PORTFOLIO_BUILD_DIR` value for build and start. Ordinary builds use `.next` when the variable is absent.
 
-## Learn More
+## Pages and content
 
-To learn more about Next.js, take a look at the following resources:
+- `/`: introduction, four selected projects, professional background, GitHub contributions, contact, and CV download.
+- `/work/tando`, `/work/labbkpi`, `/work/parents`, `/work/hermes`: statically generated case studies with keyboard-accessible image galleries and native screenshot dialogs.
+- `/api/download`: retains the original download endpoint and redirects to the supplied 2026 CV. The PDF response includes an attachment filename.
+- `src/lib/profile.ts`: identity, contact details, Tando narrative, project types, and project ordering.
+- `src/lib/case-studies.json`: approved content for labbkpi, Parents Info, and Tim AI Hermes.
+- `src/lib/contributions.json`: owner-supplied snapshot of 708 contributions in 2026, dated 19 October; mostly private work and freelance repositories.
+- `src/lib/site.ts`: confirmed portfolio origin `https://raeynwa.my.id`, shared social metadata, and image reference.
+- `/robots.txt`, `/sitemap.xml`, `/opengraph-image`: crawl configuration, public content URLs, and the original black/red social preview.
+- `public/projects/showcase/`: 22 WebP derivatives of original application captures. Tando, labbkpi, and Parents Info show fictional data; Hermes shows permitted real local data.
+- `src/app/fonts/`: self-hosted Google Fonts, OFL licenses, and source provenance. Builds and visitors do not need Google font servers.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The latest supplied CV is `public/cv/CV_Raey_Maulana_Yunus_2026.pdf`. The original PDF remains unchanged in `output/pdf/`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Review stages
 
-## Deploy on Vercel
+Stages 1–4 are complete locally on `codex/profile-redesign`, verified on 21 October 2026: detailed case-study design, application implementation, confirmed live project links, and final local release review. Public demo environments are a separate project scope; Tando and labbkpi currently show **Demo in preparation**. The portfolio has not been deployed by this work.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+See `docs/stage-4-release-review.md` for the final results, deployment handoff, and limitations. Production dependency audit reports zero findings; the full audit retains five entries in one development-only lint dependency chain with no patched braces release identified. Earlier stage reports and content decisions remain in `docs/`. No impact metrics, freelance contact URLs, or public repository claims have been invented.

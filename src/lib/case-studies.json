@@ -1,0 +1,352 @@
+[
+  {
+    "id": "labbkpi",
+    "liveUrl": "https://labbkpi.id",
+    "liveAccessNote": "Opens the live platform’s login page. Access requires an authorised account.",
+    "name": "labbkpi",
+    "kind": "Client project · Education",
+    "role": "Independent delivery",
+    "stack": "Next.js · Laravel · MySQL · VPS · CI/CD",
+    "image": "labbkpi",
+    "data": "Fictional data",
+    "summary": "Digital assessment practice for a counselling lab, from participant sessions to instrument-specific results.",
+    "contribution": "Architecture, development, QA, VPS setup, CI/CD, and direct client support.",
+    "deck": "From paper-based practice to a connected assessment workflow.",
+    "intro": "A platform for a counselling laboratory at UIN Banten, supporting computer and phone participation, immediate results, and an Excel input route.",
+    "problem": [
+      "The counselling laboratory at UIN Banten wanted to digitise tools used in student practice. Participants needed to complete assessments on computers and phones, with results available after processing.",
+      "Moving the questions onto a screen was only part of the work. The application also needed to connect participants, classes, sessions, answers, and results across several instruments.",
+      "An Excel route was needed for data collected or entered outside the application. Both routes had to fit the laboratory’s procedures."
+    ],
+    "decisions": [
+      [
+        "Share administration across instruments",
+        "Schools, classes, participants, academic periods, and test sessions provide a common administrative foundation. Reusing those relationships keeps the overall procedure connected without creating a separate participant system for every instrument."
+      ],
+      [
+        "Give each instrument the structure it needs",
+        "Questions, responses, and results differ across instruments. I used shared relationships where the workflow overlapped and separate models where an instrument needed its own structure. Sociometry, for example, records choices between participants and presents them as relationships."
+      ],
+      [
+        "Keep direct participation and Excel input connected",
+        "The web test flow supports participants on computers and phones. Class templates and Excel import accommodate data entered or collected separately, alongside the laboratory’s digital workflow."
+      ],
+      [
+        "Include the operating environment in delivery",
+        "I prepared the VPS, installed the operating system and dependencies, and configured CI/CD. Direct client communication continued through implementation so bugs and initial-data issues could be resolved."
+      ]
+    ],
+    "outcome": "The platform is in use, supporting the laboratory’s move from paper-based practice to computer and phone access, immediate result processing, and Excel-based input. My involvement continued after release through direct client support.",
+    "demo": true,
+    "cover": "Completion status and instrument-specific result fields at class level.",
+    "ownership": [
+      [
+        "Analysis & documentation",
+        "Understood the client’s workflow, analysed requirements, and documented the system to be built."
+      ],
+      [
+        "Architecture & development",
+        "Designed the frontend/backend architecture, MySQL relationships, and instrument-specific application flows, then implemented them."
+      ],
+      [
+        "Testing & infrastructure",
+        "Performed QA, prepared the VPS operating system and dependencies, and set up deployment with CI/CD."
+      ],
+      [
+        "Implementation & support",
+        "Worked directly with the client to resolve bugs, initial-data issues, and questions after release."
+      ]
+    ],
+    "boundary": "The client supplied the BK expertise behind calculation and interpretation rules. I translated those requirements into data structures and application behaviour; I did not define or validate the psychological instruments.",
+    "flowTitle": "A shared session. Different assessment needs.",
+    "flow": [
+      [
+        "Organise the session",
+        "Connect the academic period, classes, and participants."
+      ],
+      [
+        "Collect the responses",
+        "Participants use the web interface, or administrators import Excel data."
+      ],
+      [
+        "Process by instrument",
+        "Apply the calculation requirements supplied by the client."
+      ],
+      [
+        "Review the results",
+        "Present completion status, instrument-specific fields, and individual detail."
+      ]
+    ],
+    "decisionTitle": "Architecture around the assessment procedure",
+    "galleryTitle": "From session setup to individual responses.",
+    "gallery": [
+      {
+        "id": "sessions",
+        "label": "Sessions",
+        "key": "labbkpi-sessions",
+        "title": "Session and classes",
+        "caption": "A shared session connects the academic period to participating classes.",
+        "copy": "Session administration brings the academic period and participating classes together, with participant counts visible in the class list."
+      },
+      {
+        "id": "results",
+        "label": "Results",
+        "key": "labbkpi-detail",
+        "title": "Individual responses",
+        "caption": "A participant’s result summary stays connected to their recorded answers.",
+        "copy": "The RIASEC workflow supports a class-level result table and an individual detail view. Result fields follow the requirements supplied by the client."
+      },
+      {
+        "id": "excel",
+        "label": "Excel input",
+        "key": "labbkpi-excel",
+        "title": "Excel import",
+        "caption": "Class templates and upload support the laboratory’s spreadsheet workflow.",
+        "copy": "Administrators can use an Excel route for assessment data that needs to be entered or processed separately."
+      },
+      {
+        "id": "sociometry",
+        "label": "Sociometry",
+        "key": "labbkpi-sociometry",
+        "title": "Sociometry matrix",
+        "caption": "Participant choices appear as relationships between class members.",
+        "copy": "A different instrument needs a different relationship model. Sociometry presents participant choices through a matrix and its associated visualisation tools."
+      },
+      {
+        "id": "mobile",
+        "label": "Mobile",
+        "key": "labbkpi-mobile",
+        "title": "Mobile participation",
+        "caption": "One question at a time, with answer choices and navigation.",
+        "copy": "Participants can complete a test through a phone interface, keeping the digital workflow accessible beyond a desktop computer.",
+        "phone": true
+      }
+    ],
+    "disclosure": "Original labbkpi frontend with fictional participants, schools, sessions, questions, and result values. Scores and labels are illustrative UI data, not calculated or validated assessment outcomes. No production records are shown.",
+    "scope": "This case study demonstrates software engineering and delivery. Calculation and interpretation requirements come from the client’s BK expertise; no psychometric validation, usage totals, or measured time savings are claimed."
+  },
+  {
+    "id": "parents",
+    "liveUrl": "https://api.almasoem.com",
+    "liveAccessNote": "Live portal for parents of enrolled students. Access requires an authorised parent account.",
+    "name": "Al Ma’soem Parents Info",
+    "kind": "Team project · Education",
+    "role": "Project Manager",
+    "stack": "Laravel · Blade · Bootstrap · JavaScript",
+    "image": "parents",
+    "data": "Fictional data",
+    "summary": "Finance-issued bills, gateway payments, and academic information in a portal for parents.",
+    "contribution": "User research, requirements analysis, and business-process direction with the development team.",
+    "deck": "School billing and student information, connected.",
+    "intro": "A parent portal shaped around the school’s finance and academic workflows, delivered with a development team.",
+    "problem": [
+      "Parents previously transferred money to each student’s virtual account and entered the amount themselves. School staff communicated billing information separately, and the transferred amount could differ from the intended bill.",
+      "The change needed to start with the business process: who defines a bill, how a parent sees what is due, and how the payment amount is determined.",
+      "As Project Manager, I shaped that direction with a development team, while keeping finance connected to the broader parent portal."
+    ],
+    "decisions": [
+      [
+        "Let the finance division define what is due",
+        "Bills and their amounts originate with the foundation’s finance division. The portal gives parents and school staff a shared reference instead of relying on separate messages from class teachers for each amount."
+      ],
+      [
+        "Derive the payable amount from selected bills",
+        "Parents choose the relevant billing periods and review the breakdown and total before proceeding. Payment follows the selected bills rather than a freely entered transfer amount, while the gateway offers several payment channels."
+      ],
+      [
+        "Make payment updates part of the workflow",
+        "Automatic WhatsApp and email notifications provide updates to parents. Billing status and the portal’s notification view help them follow the state of a payment."
+      ],
+      [
+        "Keep financial and academic context together",
+        "Finance sits alongside attendance, achievements, violation points, memorisation, and other student activities. Families can access their child’s school information and payment records through the same portal."
+      ]
+    ],
+    "outcome": "The resulting workflow connects finance-issued bills, bill-based payment amounts, gateway payment channels, and automatic notifications. Parents also have a central place to access their child’s academic information.",
+    "cover": "Issued bills, paid status, and remaining balances in one parent-facing view.",
+    "ownership": [
+      [
+        "User research",
+        "Conducted initial research with users to understand the existing process and the needs behind the requested features."
+      ],
+      [
+        "Requirements analysis",
+        "Analysed billing and payment needs, including the information parents and school staff needed to share."
+      ],
+      [
+        "Business-process design",
+        "Defined the proposed workflow for finance-issued bills, bill-based payment amounts, and updates to parents."
+      ],
+      [
+        "System direction",
+        "Communicated the processes to the development team and took responsibility for the direction of the system."
+      ]
+    ],
+    "boundary": "My role was Project Manager. The team handled the ERD, application code, QA, and technical documentation; this case study represents my contribution in research, analysis, and system direction.",
+    "flowTitle": "From a finance-issued bill to a payment update.",
+    "flow": [
+      [
+        "Finance issues the bill",
+        "The foundation’s finance division determines the amount due."
+      ],
+      [
+        "The parent selects periods",
+        "Bill details and the corresponding total are shown for review."
+      ],
+      [
+        "Payment follows the bill",
+        "Gateway payment channels support the bill-derived amount."
+      ],
+      [
+        "The parent receives updates",
+        "Automatic WhatsApp and email notifications accompany the payment workflow."
+      ]
+    ],
+    "decisionTitle": "Start with the process behind the payment",
+    "galleryTitle": "A parent’s view of school information.",
+    "gallery": [
+      {
+        "id": "overview",
+        "label": "Overview",
+        "key": "parents-overview",
+        "title": "Parent overview",
+        "caption": "Attendance, achievements, memorisation, and violation points.",
+        "copy": "The overview brings student information into one place, with navigation to the portal’s finance and activity records."
+      },
+      {
+        "id": "payment",
+        "label": "Payment",
+        "key": "parents-payment",
+        "title": "Payment selection",
+        "caption": "Selecting a period produces a bill-derived total and breakdown.",
+        "copy": "The payment interface presents the selected period, bill details, and payable amount together before the next step."
+      },
+      {
+        "id": "mobile",
+        "label": "Mobile",
+        "key": "parents-mobile",
+        "title": "Mobile parent home",
+        "caption": "Student records and finance navigation on a phone.",
+        "copy": "The mobile home keeps school information and navigation available in the parent’s phone interface.",
+        "phone": true
+      },
+      {
+        "id": "updates",
+        "label": "Updates",
+        "key": "parents-notification",
+        "title": "Account notification",
+        "caption": "An illustrative payment update in the portal notification menu.",
+        "copy": "The notification view provides a place to review account updates. This image illustrates the in-portal view, rather than a delivered WhatsApp message or email.",
+        "phone": true
+      }
+    ],
+    "disclosure": "Original portal templates with fictional parents, students, bills, and notifications. Amounts and counts are example UI data. No real payment was created or notification sent for these captures; production records and credentials were not used.",
+    "scope": "The work shown here is research, analysis, and project direction within a team. No measured reduction in payment errors, communication volume, or processing time is claimed."
+  },
+  {
+    "id": "hermes",
+    "name": "Tim AI Hermes",
+    "kind": "Personal system · Local Docker",
+    "role": "Idea through local deployment",
+    "stack": "Hermes · Next.js · Three.js · SQLite · Docker",
+    "image": "hermes",
+    "data": "Real local application",
+    "summary": "An AI workflow with a read-only view of agents, tasks, and a virtual office.",
+    "contribution": "Planning, development, testing, and local Docker deployment of the team setup and Mission Control.",
+    "deck": "A personal AI workflow I can inspect.",
+    "intro": "Built around Hermes to support invoices and project progress reports, with Mission Control providing monitoring and a visual view of the team.",
+    "problem": [
+      "I built a personal AI team around Hermes to support my work, including client invoices and progress reports for ongoing projects.",
+      "The workflow involves roles, task states, project context, and work that may need attention. I wanted a shared view of those signals so I could inspect the team’s current state and follow the context behind a task.",
+      "Hermes provides the agent framework. My project brings together the personal team setup, its working process, and Mission Control as a local monitoring interface."
+    ],
+    "decisions": [
+      [
+        "Give monitoring its own boundary",
+        "Mission Control is read-only. It displays tasks and runtime information while operational changes remain in the underlying workflow. A separate service, restricted data mounts, information filtering, and session-based access support that boundary."
+      ],
+      [
+        "Distinguish roles from current activity",
+        "The roster shows an agent’s role and configured status alongside its live state. Task views add ownership, descriptions, status, and recorded events. Idle and Blocked remain visible because they are useful supervision signals."
+      ],
+      [
+        "Keep project context connected",
+        "Organisation and project filters provide context across views. Task details and event timelines help me inspect how work progressed beyond a final status label."
+      ],
+      [
+        "Make the same status spatially readable",
+        "The virtual office presents rooms, desks, avatars, and status indicators, with a 2D floor-plan alternative. Avatar activities are a visual layer: coffee, rest, or prayer animations do not pause an agent process or change its task state."
+      ]
+    ],
+    "outcome": "The project gives my personal Hermes workflow an interface for monitoring and review, alongside its practical use for invoices and progress reports. It also supports ongoing development and testing of additional agent roles and workflows.",
+    "cover": "Rooms, avatars, and status indicators provide a spatial view of the team.",
+    "ownership": [
+      [
+        "Idea & planning",
+        "Defined the purpose of the personal AI team and planned how the workflow and monitoring interface should fit together."
+      ],
+      [
+        "Agent workflow",
+        "Configured the team setup, agent workflow, and supporting environment around Hermes."
+      ],
+      [
+        "Mission Control development",
+        "Built the dashboard, data views, and virtual-office interface for inspecting the team and recorded work."
+      ],
+      [
+        "Testing & local deployment",
+        "Tested the system and prepared its Docker deployment on my own machine."
+      ]
+    ],
+    "boundary": "This is an integration and workflow project built around Hermes. The current deployment is local through Docker; my confirmed practical uses are invoices and project progress reports.",
+    "flowTitle": "Follow the work and its context.",
+    "flow": [
+      [
+        "Set up the team",
+        "Define roles and configure the underlying agent workflow."
+      ],
+      [
+        "Use the workflow",
+        "Prepare invoices and project progress reports."
+      ],
+      [
+        "Inspect the state",
+        "Review agent activity, task ownership, and work that needs attention."
+      ],
+      [
+        "Review the context",
+        "Open recorded task descriptions and event timelines in Mission Control."
+      ]
+    ],
+    "decisionTitle": "A monitoring interface with clear boundaries",
+    "galleryTitle": "Team status, task history, and a virtual office.",
+    "gallery": [
+      {
+        "id": "agents",
+        "label": "Agents",
+        "key": "hermes-agents",
+        "title": "Agent roster",
+        "caption": "Roles and live states alongside the current task context.",
+        "copy": "Agent cards connect roles, runtime states, and task context. The view includes idle or blocked work when that is what the system records."
+      },
+      {
+        "id": "tasks",
+        "label": "Tasks",
+        "key": "hermes-task",
+        "title": "Task inspection",
+        "caption": "A recorded Tando task with its description, status, and event timeline.",
+        "copy": "The selected task is a personal Tando design task recorded as Done. Its description and timeline provide context for reviewing the work."
+      },
+      {
+        "id": "office",
+        "label": "Floor plan",
+        "key": "hermes-floor",
+        "title": "2D floor plan",
+        "caption": "An alternative view of the office layout and agent states.",
+        "copy": "The same team can be explored through a 2D floor plan alongside the 3D office shown above."
+      }
+    ],
+    "disclosure": "Real local Mission Control data, captured with the owner’s permission on 20 October 2026. Statuses may change. Selected views show agent roles and a personal Tando task; they do not include client financial documents, credentials, or raw agent conversations.",
+    "scope": "The system currently runs locally through Docker. Screenshots are operational snapshots, including onboarding work and tasks needing attention; they are not evidence of measured time savings or fully autonomous project delivery."
+  }
+]
